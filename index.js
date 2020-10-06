@@ -58,9 +58,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply( num1 , num2){
+    return num1 * num2
   }
+
+  console.log( multiply ( 2 , 5 ) )
 
 
 
@@ -74,9 +76,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7
 }
+
+console.log(dogYears(2))
 
 
 
@@ -107,9 +111,26 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(dogLbs , dogAge){
+    if (dogAge >= 1 && dogLbs <= 5 ) {
+      return dogLbs * 0.05
+    } else if (dogAge >=1 && dogLbs >= 6 && dogLbs <= 10) {
+      return dogLbs * 0.04
+    } else if (dogAge >=1 && dogLbs >= 11 && dogLbs <= 15){
+      return dogLbs * 0.03
+    } else if (dogAge >=1 && dogLbs > 15){
+      return dogLbs * 0.02
+    } else if (dogAge >= 2/12 && dogAge < 4/12 ) {
+      return dogLbs * .10
+    } else if (dogAge >= 4/12 && dogAge < 7/12 ) {
+      return dogLbs * 0.05
+    } else if ( dogAge >= 7/12 && dogAge < 1 ) {
+      return dogLbs * 0.04
+    }
+       
   }
+
+  console.log(hungryDog(15,1))
 
 
 
@@ -126,11 +147,29 @@ Use the game function below to do the following:
   
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
+let compChoice = Math.floor(Math.random() * 3)
 
-function game(/*add your code here*/){
-    /*add your code here*/
-}
+function game(playerChoice){
   
+  if (compChoice === 0) {
+    compChoice = 'rock'
+  } else if (compChoice === 1) {
+    compChoice = 'paper'
+  } else if (compChoice === 2){
+    compChoice = 'scissors'
+  } 
+
+  if (playerChoice === compChoice){
+    return 'Tie'
+  } else { return 'not tie'}
+
+}
+
+
+
+
+
+    
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/

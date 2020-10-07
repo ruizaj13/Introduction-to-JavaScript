@@ -147,23 +147,28 @@ Use the game function below to do the following:
   
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
-let compChoice = Math.floor(Math.random() * 3)
 
-function game(playerChoice){
-  
-  if (compChoice === 0) {
-    compChoice = 'rock'
-  } else if (compChoice === 1) {
-    compChoice = 'paper'
-  } else if (compChoice === 2){
-    compChoice = 'scissors'
-  } 
-
-  if (playerChoice === compChoice){
-    return 'Tie'
-  } else { return 'not tie'}
-
+function game(){
 }
+// function game(playerChoice){
+//   let compChoice = Math.floor(Math.random() * 2)
+//   if (compChoice === 0) {
+//     compChoice = rock;
+//   } else if (compChoice === 1) {
+//     compChoice = paper;
+//   } else {
+//     compChoice = scissors;
+//   } 
+  
+//   if (playerChoice === compChoice) {
+//     return 'it\'s a tie';
+//   } else if ((playerChoice === rock) && (compChoice === scissors) || (playerChoice === paper) && (compChoice === rock) || (playerChoice === scissors) && (compChoice === paper)) {
+//     return 'you win!';
+//   } else {
+//     return 'you lose!';
+//   }
+//  }
+//     console.log(game(rock)) 
 
 
 
@@ -183,9 +188,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kiloMeters){
+    return kiloMeters * 0.621371
   }
+
+  console.log(miles(10))
 
 
 
@@ -197,9 +204,12 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(centiMeter){
+    return centiMeter/30.48
   }
+    console.log (feet(30.48))
+
+
  
 
 
@@ -213,9 +223,12 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+  for (let i=0; i<number; i++){
+    return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`
   }
+}
+  console.log(annoyingSong(5))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -233,9 +246,19 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(score){
+    if ( score >= 90 && score <=100 ) {
+      return 'you got a A'
+    } else if ( score >=80 && score <=89 ) {
+      return 'you got a B'
+    } else if (score >=70 && score <=79) {
+      return 'you got a C'
+    } else if (score >=60 && score <=69) {
+      return 'you got a D'
+    } else {return 'you got a F'}
   }
+
+    console.log(grade(85))
   
   
   

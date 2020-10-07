@@ -148,27 +148,25 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(){
-}
-// function game(playerChoice){
-//   let compChoice = Math.floor(Math.random() * 2)
-//   if (compChoice === 0) {
-//     compChoice = rock;
-//   } else if (compChoice === 1) {
-//     compChoice = paper;
-//   } else {
-//     compChoice = scissors;
-//   } 
+function game(playerChoice){
+  let compChoice = Math.floor(Math.random()*3);
+  if (compChoice === 1) {
+    compChoice = 'rock';
+  } else if (compChoice === 2) {
+    compChoice = 'paper';
+  } else if (compChoice === 0) {
+    compChoice = 'scissors';
+  } 
   
-//   if (playerChoice === compChoice) {
-//     return 'it\'s a tie';
-//   } else if ((playerChoice === rock) && (compChoice === scissors) || (playerChoice === paper) && (compChoice === rock) || (playerChoice === scissors) && (compChoice === paper)) {
-//     return 'you win!';
-//   } else {
-//     return 'you lose!';
-//   }
-//  }
-//     console.log(game(rock)) 
+  if (playerChoice === compChoice) {
+    return 'it\'s a tie';
+  } else if ((playerChoice === 'rock') && (compChoice === 'scissors') || ((playerChoice === 'paper') && (compChoice === 'rock')) || ((playerChoice === 'scissors') && (compChoice === 'paper'))) {
+    return 'you win!';
+  } else {
+    return 'you lose!';
+  }
+ }
+    console.log(game()) 
 
 
 

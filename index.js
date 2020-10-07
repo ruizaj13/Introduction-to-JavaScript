@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 12;
+if(votingAge >= 18){
+  console.log(true);
+}
 
 
 /*
@@ -30,7 +33,11 @@ Do the following:
 
    HINT: no function required
 */
-
+let num1 = 1
+let num2 = 2
+if(num1 < num2){
+  console.log(num1+2)
+}
 
 
 
@@ -45,7 +52,7 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+number('1999');  
 
 
 
